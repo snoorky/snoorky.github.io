@@ -79,11 +79,102 @@ function greeting() {
     const text = document.getElementById('greeting');
 
     if (currentHour.getHours() < 12) {
-        text.innerHTML = 'Bom dia,';
+        text.innerHTML = 'Good morning,';
     } else if (currentHour.getHours() < 18) {
-        text.innerHTML = 'Boa tarde,';
+        text.innerHTML = 'Good afternoon,';
     } else {
-        text.innerHTML = 'Boa noite,';
+        text.innerHTML = 'Good evening,';
     }
 }
 greeting();
+
+function pagination() {
+    const state = {
+        currentPage: 1,
+        perPage: 6,
+        pages: Math.ceil(document.querySelectorAll('.portfolio .item').length / 6)
+    }
+
+    const controls = {
+        next() {
+            if (state.currentPage < state.perPage) {
+                state.currentPage++
+                update()
+
+                if (state.currentPage === state.pages) {
+                    document.getElementById('nextPage').classList.add('disabled');
+                    document.getElementById('nextPage').disabled = true;
+                }
+                if (state.currentPage > 1) {
+                    document.getElementById('prevPage').classList.remove('disabled');
+                    document.getElementById('prevPage').disabled = false;
+                }
+            }
+        },
+
+        prev() {
+            if (state.currentPage > 1) {
+                state.currentPage--
+                update()
+
+                if (state.currentPage < state.pages) {
+                    document.getElementById('nextPage').classList.remove('disabled');
+                    document.getElementById('nextPage').disabled = false;
+                }
+                if (state.currentPage === 1) {
+                    document.getElementById('prevPage').classList.add('disabled');
+                    document.getElementById('prevPage').disabled = true;
+                }
+            }
+        },
+
+        createListeners() {
+            document.getElementById('prevPage').addEventListener('click', () => {
+                controls.prev()
+            })
+
+            document.getElementById('nextPage').addEventListener('click', () => {
+                controls.next();
+            })
+        }
+    }
+
+    const list = {
+        update() {
+            const items = document.querySelectorAll('.portfolio .item');
+            const startIndex = (state.currentPage - 1) * state.perPage;
+            const endIndex = startIndex + state.perPage;
+            const pagesContainer = document.getElementById('pages');
+            pagesContainer.innerHTML = "";
+
+            items.forEach((item, index) => {
+                if (index >= startIndex && index < endIndex) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+
+            for (let i = 1; i <= state.pages; i++) {
+                const pageButton = document.createElement('button');
+                pageButton.textContent = i;
+                pageButton.addEventListener('click', () => {
+                    state.currentPage = i;
+                    update();
+                });
+
+                if (i === state.currentPage) {
+                    pageButton.classList.add('current-page');
+                }
+                pagesContainer.appendChild(pageButton);
+            }
+        }
+    };
+    list.update();
+    controls.createListeners();
+
+    function update() {
+        list.update();
+    }
+}
+pagination();
