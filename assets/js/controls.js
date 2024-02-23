@@ -73,3 +73,17 @@ function looping() {
     }, 100);
 }
 looping();
+
+function greeting() {
+    const currentHour = new Date();
+    const text = document.getElementById('greeting');
+
+    if (currentHour.getHours() < 12) {
+        text.innerHTML = 'Bom dia,';
+    } else if (currentHour.getHours() < 18) {
+        text.innerHTML = 'Boa tarde,';
+    } else {
+        text.innerHTML = 'Boa noite,';
+    }
+}
+greeting();

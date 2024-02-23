@@ -22,6 +22,7 @@ body {
 
 h1 {
     font-size: 80px;
+    margin-bottom: 16px;
 }
 
 h2 {
@@ -86,7 +87,7 @@ nav li:hover, nav li.active {
 nav li.expanded {
     justify-content: start;
     padding-left: 22px;
-    width: 150px;
+    width: 135px;
 }
 
 nav li img {
@@ -141,7 +142,7 @@ span.cursor {
 
 .social img {
     width: 30px;
-    margin-right: 32px;
+    margin-right: 24px;
 }
 
 .social img.facebook:hover {
@@ -162,4 +163,106 @@ span.cursor {
 
 .social img.whatsapp:hover {
     content: url(../icons/whatsapp-hover.png);
+}
+
+section#about {
+    margin-left: 200px;
+    height: 100vh;
+    width: calc(100% - 400px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.me {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 96px;
+}
+
+.intro {
+    width: 700px;
+    text-align: justify;
+}
+
+.profile {
+    position: absolute;
+    right: 0;
+    border-radius: 50%;
+    width: 335px;
+    height: 335px;
+    background: url(../images/profile.jpg);
+    background-size: cover;
+    background-position: top 25% center;
+    
+}
+
+.details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.information {
+    width: 475px;
+}
+
+.information .item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.information .item h5 {
+    width: 115px;
+}
+
+.information .item img {
+    width: 30px;
+}
+
+.information button {
+    padding: 16px 32px;
+    border: 1px solid var(--purple);
+    background-color: var(--purple);
+    border-radius: 5px;
+    color: var(--white);
+}
+
+.information button a {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.information button img {
+    width: 20px;
+    margin-left: 16px;
+}
+
+.computerLanguages {
+    width: 600px;
+    margin-right: -20px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.computerLanguages .language {
+    border: 3px solid var(--purple);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc((25% - 20px));
+    margin: 0 20px 20px 0;
+    padding: 16px 24px;
+}
+
+.computerLanguages .language img {
+    width: 50px;
+    margin-bottom: 16px;
 }
