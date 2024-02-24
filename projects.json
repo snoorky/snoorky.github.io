@@ -1,0 +1,26 @@
+[
+    {
+        "imageSrc": "./assets/images/work-1.jpg",
+        "title": "item 1",
+        "type": "Web Design",
+        "creationDate": "18 Sep. 2018"
+    },
+    {
+        "imageSrc": "./assets/images/work-2.jpg",
+        "title": "item 2",
+        "type": "Web Design",
+        "creationDate": "18 Sep. 2018"
+    },
+    {
+        "imageSrc": "./assets/images/work-2.jpg",
+        "title": "item 2",
+        "type": "Web Design",
+        "creationDate": "18 Sep. 2018"
+    },
+    {
+        "imageSrc": "./assets/images/work-2.jpg",
+        "title": "item 2",
+        "type": "Web Design",
+        "creationDate": "18 Sep. 2018"
+    }
+]

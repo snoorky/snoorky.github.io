@@ -174,7 +174,7 @@ span.cursor {
 section#about {
     margin-left: 200px;
     height: 100vh;
-    width: calc(100% - 400px);
+    width: calc(100% - 350px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -185,11 +185,11 @@ section#about {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 96px;
+    margin-bottom: 10%;
 }
 
 .intro {
-    width: 550px;
+    width: 60%;
     text-align: justify;
 }
 
@@ -212,7 +212,7 @@ section#about {
 }
 
 .information {
-    width: 475px;
+    width: 40%;
 }
 
 .information .item {
@@ -250,7 +250,7 @@ section#about {
 }
 
 .computerLanguages {
-    width: 600px;
+    width: 60%;
     margin-right: -20px;
     display: flex;
     flex-flow: row wrap;
@@ -279,7 +279,7 @@ section#projects {
     flex-direction: column;
     justify-content: center;
     height: 100vh;
-    width: calc(100% - 300px);
+    width: calc(100% - 350px);
 }
 
 .title {
@@ -337,13 +337,14 @@ button.disabled {
     box-shadow: 0px 0px 300px 0px rgba(0,0,0,0.1);
     background-color: var(--white);
     border-radius: 5px;
-    width: calc(33% - 20px);
-    margin: 0 20px 20px 0;
+    width: calc(33% - 15px);
+    height: auto;
+    margin: 0 15px 15px 0;
 }
 
 .portfolio .item img {
     width: 100%;
-    height: 150px;
+    height: 200px;
     object-fit: cover;
     border-radius: 3px 3px 0 0;
 }
@@ -370,4 +371,107 @@ button.disabled {
 .portfolio .item button img {
     width: 25px;
     height: 25px;
+}
+
+section#contact {
+    margin-left: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 75vh;
+    width: calc(100% - 300px);
+}
+
+.formulario {
+    width: 60%;
+    padding: 24px;
+    height: 450px;
+    border-radius: 10px 0 0 10px;
+    position: relative;
+    box-shadow: 0px 0px 300px 0px rgba(0,0,0,0.1);
+}
+
+.formulario img {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    height: 50px;
+}
+
+.formulario form {
+    width: calc(100% + 20px);
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.formulario form .inputContent {
+    width: calc(50% - 20px);
+    margin: 0 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario form .inputContent.end {
+    width: 100%;
+    position: relative;
+}
+
+.formulario form label {
+    font-size: 12px;
+    color: var(--offBlack);
+}
+
+.formulario form input, .formulario form textarea {
+    border: none;
+    border-bottom: 1px solid var(--offBlack);
+    padding: 16px 0 16px 0;
+    font-size: 14px;
+    resize: none;
+}
+
+.formulario form input::placeholder, .formulario form textarea::placeholder {
+    color: var(--black)
+}
+
+.formulario form button {
+    right: -25px;
+    bottom: 50px;
+    position: absolute;
+    border: none;
+    background: none;
+}
+
+.formulario form button img {
+    width: 50px;
+    height: 50px;
+}
+
+.other {
+    width: 40%;
+    height: 450px;
+    border-radius: 0 10px 10px 0;
+    background-color: var(--purple);
+    padding: 24px 32px;
+    color: white;
+}
+
+.other .information {
+    width: 100%;
+}
+
+.other .information h5 {
+    color: white;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 25px 25% 15px 25%;
+    height: 25vh;
+    background-color: var(--purple);
+    color: white;
 }
