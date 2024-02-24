@@ -1,26 +1,52 @@
 [
     {
+        "id": "1",
         "imageSrc": "./assets/images/work-1.jpg",
         "title": "item 1",
         "type": "Web Design",
-        "creationDate": "18 Sep. 2018"
+        "creationDate": "18 Sep. 2018",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis consequatur libero quos earum quae!",
+        "repository": "https://github.com/snoorky/snoorky.github.io",
+        "live": "https://www.zolmo.com.br"
     },
     {
+        "id": "2",
         "imageSrc": "./assets/images/work-2.jpg",
         "title": "item 2",
         "type": "Web Design",
-        "creationDate": "18 Sep. 2018"
+        "creationDate": "18 Sep. 2018",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis consequatur libero quos earum quae!",
+        "repository": "https://github.com/snoorky/snoorky.github.io",
+        "live": "https://www.zolmo.com.br"
     },
     {
+        "id": "3",
         "imageSrc": "./assets/images/work-2.jpg",
         "title": "item 2",
         "type": "Web Design",
-        "creationDate": "18 Sep. 2018"
+        "creationDate": "18 Sep. 2018",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis consequatur libero quos earum quae!",
+        "repository": "https://github.com/snoorky/snoorky.github.io",
+        "live": "https://www.zolmo.com.br"
     },
     {
+        "id": "4",
         "imageSrc": "./assets/images/work-2.jpg",
         "title": "item 2",
         "type": "Web Design",
-        "creationDate": "18 Sep. 2018"
+        "creationDate": "18 Sep. 2018",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis consequatur libero quos earum quae!",
+        "repository": "https://github.com/snoorky/snoorky.github.io",
+        "live": "https://www.zolmo.com.br"
+    },
+    {
+        "id": "5",
+        "imageSrc": "./assets/images/work-2.jpg",
+        "title": "item 2",
+        "type": "Web Design",
+        "creationDate": "18 Sep. 2018",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis consequatur libero quos earum quae!",
+        "repository": "https://github.com/snoorky/snoorky.github.io",
+        "live": "https://www.zolmo.com.br"
     }
 ]

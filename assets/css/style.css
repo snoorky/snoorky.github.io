@@ -229,12 +229,13 @@ section#about {
     width: 30px;
 }
 
-.information button {
+.information button, .cta button {
     padding: 16px 32px;
     border: 1px solid var(--purple);
     background-color: var(--purple);
     border-radius: 5px;
     color: var(--white);
+    margin-right: 24px;
 }
 
 .information button a {
@@ -352,8 +353,8 @@ button.disabled {
 .portfolio .item .description {
     display: flex;
     justify-content: space-between;
-    align-items: end;
     margin: 16px;
+    position: relative;
 }
 
 .portfolio span {
@@ -367,10 +368,15 @@ button.disabled {
 .portfolio .item button {
     background: none;
     border: none;
+    position: absolute;
+    top: 50%;
+    right: -55px;
+    transform: translate(0, -50%);
 }
-.portfolio .item button img {
+.portfolio .item .cta button img {
     width: 25px;
     height: 25px;
+    cursor: pointer;
 }
 
 section#contact {
@@ -474,4 +480,43 @@ footer {
     height: 25vh;
     background-color: var(--purple);
     color: white;
+}
+
+section#project {
+    margin-left: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: calc(100% - 300px);
+}
+
+.projectDetails {
+    display: flex;
+}
+
+.projectDetails .slider {
+    width: 60%;
+}
+
+.projectDetails .slider img {
+    box-shadow: 0px 0px 300px 0px rgba(0,0,0,0.1);
+    width: 95%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.projectDetails .projectInformation {
+    box-shadow: 0px 0px 300px 0px rgba(0,0,0,0.1);
+    background-color: var(--white);
+    width: 40%;
+    padding: 24px;
+    position: relative;
+    text-align: justify;
+}
+
+.projectDetails .projectInformation .cta {
+    position: absolute;
+    bottom: 24px;
 }
