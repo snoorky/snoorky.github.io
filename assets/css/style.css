@@ -352,6 +352,7 @@ button.disabled {
     height: 200px;
     object-fit: cover;
     border-radius: 3px 3px 0 0;
+    z-index: 1;
 }
 
 .portfolio .item .description {
@@ -513,8 +514,9 @@ section#project {
 
 .projectDetails .projectInformation {
     box-shadow: 0px 0px 300px 0px rgba(0,0,0,0.1);
+    border-radius: 10px;
     background-color: var(--white);
-    width: 40%;
+    width: 35%;
     padding: 24px;
     position: relative;
     text-align: justify;
