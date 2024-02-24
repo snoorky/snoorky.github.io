@@ -225,6 +225,10 @@ section#about {
     width: 90px;
 }
 
+.information .item.end h5 {
+    width: 50px;
+}
+
 .information .item img {
     width: 30px;
 }
