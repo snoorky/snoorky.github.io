@@ -548,7 +548,7 @@ section#project {
     font-size: 10px;
 }
 
-@media (min-width: 820px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
     h1 {
         font-size: 56px;
     }
@@ -590,7 +590,7 @@ section#project {
     }
 
     .menu img {
-        width: 50px;
+        width: 40px;
     }
 
     .banner {
