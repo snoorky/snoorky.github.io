@@ -38,7 +38,7 @@ window.onload = function() {
     if (isMobile()) {
         const h6Elements = document.querySelectorAll('nav li h6');
         h6Elements.forEach(h6 => {
-            h6.style.display = 'block';
+            h6.style.display = 'block !important';
         });
     }
 };
