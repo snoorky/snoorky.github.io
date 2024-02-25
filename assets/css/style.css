@@ -28,6 +28,7 @@ h1 {
 
 h2 {
     font-size: 40px;
+    color: var(--purple);
     margin-bottom: 40px;
 }
 
@@ -99,6 +100,11 @@ nav li.expanded {
 nav li img {
     width: 20px;
     height: 20px;
+}
+
+.menu {
+    display: none;
+    z-index: 99999;
 }
 
 .banner {
@@ -233,7 +239,7 @@ section#about {
     width: 30px;
 }
 
-.information button, .cta button {
+.information button {
     padding: 16px 32px;
     border: 1px solid var(--purple);
     background-color: var(--purple);
@@ -278,7 +284,7 @@ section#about {
     margin-bottom: 16px;
 }
 
-section#projects {
+section#myPortfolio {
     margin-left: 200px;
     display: flex;
     flex-direction: column;
@@ -335,23 +341,24 @@ button.disabled {
 .portfolio {
     display: flex;
     flex-flow: row wrap;
-    margin-right: -35px;
+    margin-right: -30px;
 }
 
 .portfolio .item {
     box-shadow: 0px 0px 300px 0px rgba(0,0,0,0.1);
     background-color: var(--white);
-    border-radius: 5px;
-    width: calc(33% - 15px);
+    border-radius: 10px;
+    width: calc(33% - 20px);
     height: auto;
-    margin: 0 15px 15px 0;
+    margin: 0 20px 20px 0;
 }
 
 .portfolio .item img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 3px 3px 0 0;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 10px 10px 0 0;
     z-index: 1;
 }
 
@@ -375,13 +382,15 @@ button.disabled {
     border: none;
     position: absolute;
     top: 50%;
-    right: -55px;
+    right: 0;
     transform: translate(0, -50%);
 }
+
 .portfolio .item .cta button img {
     width: 25px;
     height: 25px;
     cursor: pointer;
+    border: none;
 }
 
 section#contact {
@@ -436,6 +445,7 @@ section#contact {
 
 .formulario form input, .formulario form textarea {
     border: none;
+    background: none;
     border-bottom: 1px solid var(--offBlack);
     padding: 16px 0 16px 0;
     font-size: 14px;
@@ -472,7 +482,7 @@ section#contact {
     width: 100%;
 }
 
-.other .information h5 {
+.other h2, .other h5, footer h2 {
     color: white;
 }
 
@@ -498,17 +508,19 @@ section#project {
 
 .projectDetails {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
 }
 
-.projectDetails .slider {
-    width: 60%;
+.slider {
+    width: 50%;
 }
 
 .projectDetails .slider img {
-    box-shadow: 0px 0px 300px 0px rgba(0,0,0,0.1);
-    width: 95%;
+    width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 10px;
 }
 
@@ -516,13 +528,507 @@ section#project {
     box-shadow: 0px 0px 300px 0px rgba(0,0,0,0.1);
     border-radius: 10px;
     background-color: var(--white);
-    width: 35%;
     padding: 24px;
-    position: relative;
+    height: 75%;
+    width: 50%;
     text-align: justify;
 }
 
 .projectDetails .projectInformation .cta {
-    position: absolute;
-    bottom: 24px;
+    margin-top: 48px;
+}
+
+.projectDetails .projectInformation .cta button {
+    padding: 16px 32px;
+    border: 1px solid var(--purple);
+    background-color: var(--purple);
+    border-radius: 5px;
+    color: var(--white);
+    margin-right: 16px;
+    font-size: 10px;
+}
+
+@media (min-width: 820px) and (max-width: 1024px) {
+    h1 {
+        font-size: 56px;
+    }
+
+    h5 {
+        font-size: 14px;
+    }
+
+    h6 {
+        display: flex;
+    }
+
+    header {
+        background-color: var(--white);
+        border-right: 1px solid var(--offBlack);
+        width: 250px;
+        display: flex;
+        left: -250px;
+        transition: left 0.3s ease;
+    }
+
+    nav li {
+        background-color: var(--offBlack);
+        justify-content: start;
+        width: 200px;
+    }
+
+    nav li.expanded {
+        width: 200px;
+        background-color: var(--purple);
+    }
+
+    .menu {
+        position: fixed;
+        width: 40px;
+        display: block;
+        right: 24px;
+        top: 24px;
+    }
+
+    .menu img {
+        width: 50px;
+    }
+
+    .banner {
+        background-size: cover;
+    }
+
+    main {
+        margin: 0;
+        align-items: center;
+        width: 100vw;
+    }
+
+    .social img {
+        margin: 0 16px;
+    }
+
+    section#about {
+        margin: auto auto;
+        width: 80vw;
+    }
+    
+    .intro {
+        width: 50%;
+    }
+    
+    .information {
+        width: 50%;
+    }
+
+    .information .item h5 {
+        width: 80px;
+    }
+    
+    .information .item img {
+        width: 25px;
+    }
+    
+    .computerLanguages {
+        width: 50%;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    
+    .computerLanguages .language {
+        border: 2px solid var(--purple);
+        width: calc((25% - 10px));
+        margin: 0 10px 10px 0;
+        padding: 0;
+    }
+
+    .computerLanguages .language h5 {
+        font-size: 10px;
+    }
+    
+    .computerLanguages .language img {
+        width: 25px;
+    }
+
+    section#myPortfolio {
+        margin: auto auto;
+        width: 80vw;
+    }
+
+    .portfolio {
+        margin-right: -20px;
+    }
+
+    .portfolio .item {
+        width: calc(50% - 20px);
+        margin: 0 20px 20px 0;
+    }
+
+    .portfolio .item img {
+        height: 250px;
+    }
+
+    section#contact {
+        margin: auto auto;
+        height: 85vh;
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .formulario {
+        width: 100%;
+        padding: 24px;
+        height: 475px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .other {
+        width: 100%;
+        height: 300px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .other .information h5 {
+        color: white;
+    }
+
+    .other .information .social img {
+        margin: 0 16px 0 0;
+    }
+
+    footer {
+        padding: 50px 20% 5px 20%;
+        height: 15vh;
+    }
+
+    section#project {
+        margin: auto auto;
+        width: 80vw;
+    }
+
+    .projectDetails {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projectDetails .slider {
+        width: 80%;
+        margin-bottom: 32px;
+    }
+
+    .projectDetails .projectInformation {
+        width: 100%;
+        height: 50%;
+        padding: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 40px;
+    }
+    
+    h2 {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+    
+    h3 {
+        font-size: 24px;
+    }
+    
+    h4 {
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+    
+    h5 {
+        font-size: 12px;
+        margin: 0 8px;
+    }
+    
+    h6 {
+        font-size: 12px;
+    }
+    
+    p {
+        font-size: 10px;
+    }
+    
+    header {
+        background-color: var(--white);
+        border-right: 1px solid var(--offBlack);
+        width: 155px;
+        display: flex;
+        left: -155px;
+        transition: left 0.3s ease;
+    }
+    
+    nav li {
+        background-color: var(--offBlack);
+        justify-content: start;
+        width: 120px;
+    }
+    
+    nav li.expanded {
+        width: 120px;
+        background-color: var(--purple);
+    }
+
+    nav li img {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .menu {
+        position: fixed;
+        width: 40px;
+        display: block;
+        right: 24px;
+        top: 24px;
+    }
+    
+    .menu img {
+        width: 40px;
+    }
+    
+    .banner {
+        background-size: cover;
+    }
+    
+    main {
+        margin: 0;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    .social img {
+        width: 24px;
+        margin: 0 8px;
+    }
+
+    section#about {
+        margin: auto auto;
+        width: 90vw;
+        height: 100vh;
+    }
+
+    .me {
+        flex-direction: column;
+    }
+        
+    .intro {
+        width: 100%;
+    }
+
+    .profile {
+        position: absolute;
+        bottom: -140px;
+        width: 120px;
+        height: 120px;
+    }
+
+    .details {
+        flex-direction: column;
+    }
+        
+    .information {
+        width: 70%;
+    }
+
+    .information .item {
+        margin-bottom: 8px;
+    }
+    
+    .information .item h5 {
+        width: 70px;
+    }
+        
+    .information .item img {
+        width: 16px;
+    }
+
+    .information button {
+        padding: 8px 16px;
+        margin-bottom: 16px;
+    }
+
+    .information button a {
+        font-size: 10px;
+    }
+    
+    .information button img {
+        width: 16px;
+        margin-left: 8px;
+    }
+        
+    .computerLanguages {
+        width: 100%;
+    }
+        
+    .computerLanguages .language {
+        border: 2px solid var(--purple);
+        width: calc((25% - 10px));
+        margin: 0 10px 10px 0;
+        padding: 8px;
+    }
+    
+    .computerLanguages .language h5 {
+        font-size: 10px;
+    }
+        
+    .computerLanguages .language img {
+        width: 25px;
+        margin-bottom: 8px;
+    }
+
+    section#myPortfolio {
+        margin: auto auto;
+        width: 90vw;
+        height: 100vh;
+    }
+
+    #pagination {
+        height: auto;
+    }
+
+    #prevPage, #nextPage {
+        width: 25px;
+        height: 25px;
+    }
+
+    #pages button {
+        width: 25px;
+        height: 25px;
+        font-size: 10px;
+        font-weight: 600;
+    }
+
+    .portfolio {
+        flex-flow: column wrap;
+        margin-right: -20px;
+    }
+
+    .portfolio .item {
+        width: 90vw;
+        margin: 0 0 5px 0;
+    }
+
+    .portfolio .item img {
+        width: 100%;
+        height: 150px;
+        object-fit: fill;
+    }
+    section#contact {
+        margin: auto auto;
+        height: 100vh;
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .formulario {
+        width: 100%;
+        padding: 24px;
+        height: auto;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .formulario img {
+        height: 25px;
+    }
+    
+    .formulario form {
+        width: 100%;
+    }
+    
+    .formulario form input, .formulario form textarea {
+        border-radius: 0;
+        font-size: 10px;
+    }
+
+    .formulario form textarea {
+        height: 80px;
+    }
+    
+    .formulario form button {
+        bottom: 40px;
+    }
+    
+    .formulario form button img {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .other {
+        width: 100%;
+        height: 175px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .other .information {
+        width: 100%;
+    }
+
+    .other .information .social {
+        margin: 16px 0;
+    }
+    
+    .other .information .social img {
+        width: 16px;
+        margin: 0 16px 0 0;
+    }
+    
+    footer {
+        padding: 25px 5% 10px 5%;
+        height: auto;
+    }
+
+    footer h2 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    section#project {
+        margin: auto auto;
+        width: 90vw;
+        height: 100vh;
+    }
+    
+    .projectDetails {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .projectDetails .slider {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .projectDetails .slider img {
+        width: 90%;
+    }
+    
+    .projectDetails .projectInformation {
+        width: 100%;
+        height: auto;
+        padding: 16px;
+    }
+
+    .projectDetails .projectInformation .cta {
+        margin-top: 24px;
+    }
+
+    .projectDetails .projectInformation .cta button {
+        padding: 16px 24px;
+        margin-right: 8px;
+    }
 }

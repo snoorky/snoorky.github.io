@@ -1,52 +1,46 @@
 [
     {
         "id": "1",
-        "imageSrc": "./assets/images/projects/zolmo.webp",
+        "imageSrc": "./assets/images/projects/zolmo.png",
+        "mockup": "./assets/images/projects/zolmo-mockup.png",
         "title": "Zolmo",
         "type": "Web Design",
-        "creationDate": "13 Sep. 2013",
+        "creationDate": "13 Sep. 2023",
         "description": "Development of a customized website for the independent real estate broker Zolmo, focusing on showcasing high-end properties and gated communities. Implementation of UI/UX techniques to highlight the client's unique selling points.",
         "repository": "https://github.com/snoorky/zolmo",
         "live": "https://www.zolmo.com.br"
     },
     {
         "id": "2",
-        "imageSrc": "./assets/images/work-2.jpg",
-        "title": "item 2",
-        "type": "Web Design",
-        "creationDate": "18 Sep. 2018",
-        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis consequatur libero quos earum quae!",
-        "repository": "https://github.com/snoorky/snoorky.github.io",
-        "live": "https://www.zolmo.com.br"
+        "imageSrc": "./assets/images/projects/components-summary.png",
+        "mockup": "./assets/images/projects/components-summary-mockup.png",
+        "title": "Summary Component",
+        "type": "Challenge",
+        "creationDate": "4 Feb. 2024",
+        "description": "I solved the challenge of building a summary component according to a specific design, using front-end practices and ensuring a responsive experience for users. Additionally, the component is interactive, ensuring that the results and total score were updated automatically.",
+        "repository": "https://github.com/snoorky/summary-component/",
+        "live": "./summary-component/"
     },
     {
         "id": "3",
-        "imageSrc": "./assets/images/work-2.jpg",
-        "title": "item 2",
-        "type": "Web Design",
-        "creationDate": "18 Sep. 2018",
-        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis consequatur libero quos earum quae!",
-        "repository": "https://github.com/snoorky/snoorky.github.io",
-        "live": "https://www.zolmo.com.br"
+        "imageSrc": "./assets/images/projects/login-page.png",
+        "mockup": "./assets/images/projects/login-page-mockup.png",
+        "title": "Login Page",
+        "type": "Authenticator",
+        "creationDate": "20 Feb. 2024",
+        "description": "This project involves the creation of a login authenticator with a user interface similar to the popular streaming platform Netflix. The goal was to develop an intuitive and attractive login system, providing users with a familiar and enjoyable experience.",
+        "repository": "https://github.com/snoorky/login-page/",
+        "live": "./login-page/"
     },
     {
         "id": "4",
-        "imageSrc": "./assets/images/work-2.jpg",
-        "title": "item 2",
-        "type": "Web Design",
-        "creationDate": "18 Sep. 2018",
-        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis consequatur libero quos earum quae!",
-        "repository": "https://github.com/snoorky/snoorky.github.io",
-        "live": "https://www.zolmo.com.br"
-    },
-    {
-        "id": "5",
-        "imageSrc": "./assets/images/work-2.jpg",
-        "title": "item 2",
-        "type": "Web Design",
-        "creationDate": "18 Sep. 2018",
-        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis consequatur libero quos earum quae!",
-        "repository": "https://github.com/snoorky/snoorky.github.io",
-        "live": "https://www.zolmo.com.br"
+        "imageSrc": "./assets/images/projects/task-list.png",
+        "mockup": "./assets/images/projects/task-list-mockup.png",
+        "title": "Task List",
+        "type": "Productivity",
+        "creationDate": "2 Feb. 2024",
+        "description": "This project involves creating an interactive task list where users can add new tasks, delete existing tasks, and mark tasks as completed. The goal is to provide a simple and effective tool for managing daily activities in an organized manner.",
+        "repository": "https://github.com/snoorky/task-list",
+        "live": "./task-list/"
     }
 ]

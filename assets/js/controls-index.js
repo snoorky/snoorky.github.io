@@ -7,12 +7,16 @@ function menuHover() {
         menu.forEach(item => {
             item.addEventListener('mouseover', function() {
                 this.classList.add('expanded');
-                this.querySelector('h6').style.display = 'block';
+                if(isMobile()) {
+                    this.querySelector('h6').style.display = 'block';
+                }
             })
         
             item.addEventListener('mouseout', function() {
                 this.classList.remove('expanded');
-                this.querySelector('h6').style.display = 'none';
+                if(!isMobile()) {
+                    this.querySelector('h6').style.display = 'none';
+                }
             })
 
             item.addEventListener('click', function(event) {
@@ -25,6 +29,36 @@ function menuHover() {
     });
 }
 menuHover();
+
+function isMobile() {
+    return window.innerWidth <= 1024;
+}
+
+window.onload = function() {
+    if (isMobile()) {
+        const h6Elements = document.querySelectorAll('nav li h6');
+        h6Elements.forEach(h6 => {
+            h6.style.display = 'block';
+        });
+    }
+};
+
+function menuMobile() {
+    const menu = document.querySelector('.menu');
+    const menuIcon = menu.querySelector('img');
+
+    menu.addEventListener('click', function() {
+        const header = document.querySelector('header');
+        if (header.style.left === "0px") {
+            header.style.left = "-250px";
+            menuIcon.src = "./assets/icons/figma-original.svg";
+        } else {
+            header.style.left = "0";
+            menuIcon.src = "./assets/icons/city.png";
+        }
+    });
+}
+menuMobile();
 
 function looping() {
     const messages = ['FrontEnd Developer', 'Mobile Developer', 'Freelancer', 'Designer'];
@@ -88,10 +122,22 @@ function greeting() {
 }
 greeting();
 
+function ProjectsPerPage() {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth <= 480) {
+        return 2;
+    } else if (screenWidth <= 1024) {
+        return 4;
+    } else {
+        return 6;
+    }
+}
+
 function pagination() {
     const state = {
         currentPage: 1,
-        perPage: 6,
+        perPage: ProjectsPerPage(),
         projects:[],
         pages: 0
     };
@@ -239,5 +285,4 @@ function pagination() {
     loadProjects();
     controls.createListeners();
 }
-
 pagination();
