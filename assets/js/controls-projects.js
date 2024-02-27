@@ -31,7 +31,7 @@ function menuHover() {
 menuHover();
 
 function isMobile() {
-    return window.innerWidth <= 1025;
+    return window.innerWidth <= 1024;
 }
 
 window.onload = function() {
@@ -59,29 +59,3 @@ function menuMobile() {
     });
 }
 menuMobile();
-
-function projects() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const projectId = urlParams.get('projectID');
-
-    function loadProjectDetails(projectId) {
-        fetch('projects.json')
-            .then(response => response.json())
-            .then(data => {
-                const project = data.find(item => item.id == projectId);
-                if (project) {
-                    document.getElementById('projectTitle').textContent = project.title;
-                    document.getElementById('projectImage').src = project.mockup;
-                    document.getElementById('projectDate').textContent = project.creationDate;
-                    document.getElementById('projectDescription').textContent = project.description;
-                    document.getElementById('repositoryLink').href = project.repository;
-                    document.getElementById('siteLink').href = project.live;
-                } else {
-                    console.error('Project not found');
-                }
-            })
-            .catch(error => console.error('Error loading project details:', error));
-    }
-    loadProjectDetails(projectId);
-};
-projects();
