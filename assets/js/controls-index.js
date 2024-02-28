@@ -31,7 +31,7 @@ function menuHover() {
 menuHover();
 
 function isMobile() {
-    return window.innerWidth <= 1024;
+    return window.matchMedia("(max-width: 1024px)").matches;
 }
 
 window.onload = function() {
