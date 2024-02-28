@@ -51,10 +51,10 @@ function menuMobile() {
         const header = document.querySelector('header');
         if (header.style.left === "0px") {
             header.style.left = "-250px";
-            menuIcon.src = "./assets/icons/menu-open.webp";
+            menuIcon.src = "./assets/icons/menu-open.png";
         } else {
             header.style.left = "0";
-            menuIcon.src = "./assets/icons/menu-close.webp";
+            menuIcon.src = "./assets/icons/menu-close.png";
         }
     });
 }
@@ -122,22 +122,10 @@ function greeting() {
 }
 greeting();
 
-function ProjectsPerPage() {
-    const screenWidth = window.innerWidth;
-
-    if (screenWidth <= 480) {
-        return 2;
-    } else if (screenWidth <= 1024) {
-        return 4;
-    } else {
-        return 6;
-    }
-}
-
 function pagination() {
     const state = {
         currentPage: 1,
-        perPage: ProjectsPerPage(),
+        perPage: isMobile() ? 2 : 3,
         projects:[],
         pages: 0
     };
@@ -214,11 +202,11 @@ function pagination() {
 
                 const button = document.createElement('button');
                 const imgButton = document.createElement('img');
-                imgButton.src = "./assets/icons/projects.webp";
+                imgButton.src = "./assets/icons/projects.png";
                 imgButton.alt = "Access project icon";
                 button.appendChild(imgButton);
                 button.addEventListener('click', () => {
-                    viewProject(project.id);
+                    window.location.href = project.linkProject;
                 });
 
                 cta.appendChild(button);
@@ -267,10 +255,6 @@ function pagination() {
         }
     };
 
-    function viewProject(projectId) {
-        window.location.href = `./projects.html?projectID=${projectId}`;
-    }
-
     function loadProjects() {
         fetch('projects.json')
             .then(response => response.json())
@@ -281,6 +265,7 @@ function pagination() {
             })
             .catch(error => console.error('Error loading projects:', error));
     }
+
 
     loadProjects();
     controls.createListeners();

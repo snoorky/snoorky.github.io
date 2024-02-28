@@ -1,46 +1,37 @@
 [
     {
-        "id": "1",
-        "imageSrc": "./assets/images/projects/zolmo.png",
-        "mockup": "./assets/images/projects/zolmo-mockup.png",
+        "imageSrc": "./assets/projects/zolmo/capa.png",
         "title": "Zolmo",
         "type": "Web Design",
         "creationDate": "13 Sep. 2023",
-        "description": "Development of a customized website for the independent real estate broker Zolmo, focusing on showcasing high-end properties and gated communities. Implementation of UI/UX techniques to highlight the client's unique selling points.",
-        "repository": "https://github.com/snoorky/zolmo",
-        "live": "https://www.zolmo.com.br"
+        "linkProject": "./assets/projects/zolmo/index.html"
     },
     {
-        "id": "2",
-        "imageSrc": "./assets/images/projects/components-summary.png",
-        "mockup": "./assets/images/projects/components-summary-mockup.png",
+        "imageSrc": "./assets/projects/summary-component/capa.png",
         "title": "Summary Component",
         "type": "Challenge",
         "creationDate": "4 Feb. 2024",
-        "description": "I solved the challenge of building a summary component according to a specific design, using front-end practices and ensuring a responsive experience for users. Additionally, the component is interactive, ensuring that the results and total score were updated automatically.",
-        "repository": "https://github.com/snoorky/summary-component/",
-        "live": "./summary-component/"
+        "linkProject": "./assets/projects/summary-component/index.html"
     },
     {
-        "id": "3",
-        "imageSrc": "./assets/images/projects/login-page.png",
-        "mockup": "./assets/images/projects/login-page-mockup.png",
+        "imageSrc": "./assets/projects/login-page/capa.png",
         "title": "Login Page",
         "type": "Authenticator",
         "creationDate": "20 Feb. 2024",
-        "description": "This project involves the creation of a login authenticator with a user interface similar to the popular streaming platform Netflix. The goal was to develop an intuitive and attractive login system, providing users with a familiar and enjoyable experience.",
-        "repository": "https://github.com/snoorky/login-page/",
-        "live": "./login-page/"
+        "linkProject": "./assets/projects/login-page/index.html"
     },
     {
-        "id": "4",
-        "imageSrc": "./assets/images/projects/task-list.png",
-        "mockup": "./assets/images/projects/task-list-mockup.png",
+        "imageSrc": "./assets/projects/task-list/capa.png",
         "title": "Task List",
         "type": "Productivity",
         "creationDate": "2 Feb. 2024",
-        "description": "This project involves creating an interactive task list where users can add new tasks, delete existing tasks, and mark tasks as completed. The goal is to provide a simple and effective tool for managing daily activities in an organized manner.",
-        "repository": "https://github.com/snoorky/task-list",
-        "live": "./task-list/"
+        "linkProject": "./assets/projects/task-list/index.html"
+    },
+    {
+        "imageSrc": "./assets/projects/calculator/capa.png",
+        "title": "Calculator",
+        "type": "Productivity",
+        "creationDate": "2 Feb. 2024",
+        "linkProject": "./assets/projects/calculator/index.html"
     }
 ]

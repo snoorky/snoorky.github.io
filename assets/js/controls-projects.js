@@ -51,10 +51,10 @@ function menuMobile() {
         const header = document.querySelector('header');
         if (header.style.left === "0px") {
             header.style.left = "-250px";
-            menuIcon.src = "./assets/icons/menu-open.webp";
+            menuIcon.src = "./assets/icons/menu-open.png";
         } else {
             header.style.left = "0";
-            menuIcon.src = "./assets/icons/menu-close.webp";
+            menuIcon.src = "./assets/icons/menu-close.png";
         }
     });
 }
