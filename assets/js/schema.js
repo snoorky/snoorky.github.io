@@ -3,6 +3,7 @@ function getSchemaData() {
         "@context": "http://schema.org",
         "@type": "Person",
         "name": "Raphael Vitor",
+        "jobTitle": "Frontend and Mobile Development Student",
         "url": "https://snoorky.github.io/",
         "sameAs": [
             "https://www.facebook.com/raphaelvitorlopes",
