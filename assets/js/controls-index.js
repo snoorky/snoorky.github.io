@@ -51,10 +51,10 @@ function menuMobile() {
         const header = document.querySelector('header');
         if (header.style.left === "0px") {
             header.style.left = "-250px";
-            menuIcon.src = "./assets/icons/menu-open.png";
+            menuIcon.src = "./assets/icons/menu-open.webp";
         } else {
             header.style.left = "0";
-            menuIcon.src = "./assets/icons/menu-close.png";
+            menuIcon.src = "./assets/icons/menu-close.webp";
         }
     });
 }
@@ -214,7 +214,7 @@ function pagination() {
 
                 const button = document.createElement('button');
                 const imgButton = document.createElement('img');
-                imgButton.src = "./assets/icons/projects.png";
+                imgButton.src = "./assets/icons/projects.webp";
                 imgButton.alt = "Access project icon";
                 button.appendChild(imgButton);
                 button.addEventListener('click', () => {
