@@ -31,7 +31,7 @@ function menuHover() {
 menuHover();
 
 function isMobile() {
-    return window.matchMedia("(max-width: 1024px)").matches;
+    return window.matchMedia("(max-width: 768px)").matches;
 }
 
 window.onload = function() {
@@ -125,7 +125,7 @@ greeting();
 function pagination() {
     const state = {
         currentPage: 1,
-        perPage: isMobile() ? 2 : 3,
+        perPage: isMobile() ? 2 : 6,
         projects:[],
         pages: 0
     };
@@ -206,7 +206,7 @@ function pagination() {
                 imgButton.alt = "Access project icon";
                 button.appendChild(imgButton);
                 button.addEventListener('click', () => {
-                    window.location.href = project.linkProject;
+                    window.open(project.linkProject, '_blank');
                 });
 
                 cta.appendChild(button);
@@ -222,18 +222,44 @@ function pagination() {
             const pagesContainer = document.getElementById('pages');
             pagesContainer.innerHTML = "";
 
-            for (let i = 1; i <= state.pages; i++) {
-                const pageButton = document.createElement('button');
-                pageButton.textContent = i;
-                pageButton.addEventListener('click', () => {
-                    state.currentPage = i;
+            if (isMobile()) {
+                const firstPageButton = document.createElement('button');
+                firstPageButton.textContent = '1';
+                firstPageButton.addEventListener('click', () => {
+                    state.currentPage = 1;
                     list.update();
                 });
+                pagesContainer.appendChild(firstPageButton);
 
-                if (i === state.currentPage) {
-                    pageButton.classList.add('current-page');
+                if (state.pages > 1) {
+                    const ellipsisButton = document.createElement('button');
+                    ellipsisButton.classList.add('disabled');
+                    ellipsisButton.textContent = '...';
+                    ellipsisButton.disabled = true;
+                    pagesContainer.appendChild(ellipsisButton);
+
+                    const lastPageButton = document.createElement('button');
+                    lastPageButton.textContent = state.pages.toString();
+                    lastPageButton.addEventListener('click', () => {
+                        state.currentPage = state.pages;
+                        list.update();
+                    });
+                    pagesContainer.appendChild(lastPageButton);
                 }
-                pagesContainer.appendChild(pageButton);
+            } else {
+                for (let i = 1; i <= state.pages; i++) {
+                    const pageButton = document.createElement('button');
+                    pageButton.textContent = i;
+                    pageButton.addEventListener('click', () => {
+                        state.currentPage = i;
+                        list.update();
+                    });
+    
+                    if (i === state.currentPage) {
+                        pageButton.classList.add('current-page');
+                    }
+                    pagesContainer.appendChild(pageButton);
+                }
             }
 
             const prevButton = document.getElementById('prevPage');
@@ -259,6 +285,7 @@ function pagination() {
         fetch('projects.json')
             .then(response => response.json())
             .then(data => {
+                data.sort((a, b) => new Date(b.creationDate) - new Date(a.creationDate));
                 state.projects = data;
                 state.pages = Math.ceil(state.projects.length / state.perPage);
                 list.update();

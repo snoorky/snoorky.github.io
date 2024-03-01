@@ -31,7 +31,70 @@
         "imageSrc": "./assets/projects/calculator/capa.png",
         "title": "Calculator",
         "type": "Productivity",
-        "creationDate": "2 Feb. 2024",
+        "creationDate": "26 Feb. 2024",
         "linkProject": "./assets/projects/calculator/index.html"
+    },
+    {
+        "imageSrc": "./assets/projects/wix/amanda-sampaio/capa.png",
+        "title": "Amanda Sampaio",
+        "type": "Wix",
+        "creationDate": "6 Feb. 2023",
+        "linkProject": "./assets/projects/wix/amanda-sampaio/index.html"
+    },
+    {
+        "imageSrc": "./assets/projects/wix/boa-fortuna/capa.png",
+        "title": "Boa Fortuna",
+        "type": "Wix",
+        "creationDate": "1 Mar. 2023",
+        "linkProject": "./assets/projects/wix/boa-fortuna/index.html"
+    },
+    {
+        "imageSrc": "./assets/projects/wix/duenas-eco/capa.png",
+        "title": "Dueñas Eco",
+        "type": "Wix",
+        "creationDate": "8 Jun. 2022",
+        "linkProject": "./assets/projects/wix/duenas-eco/index.html"
+    },
+    {
+        "imageSrc": "./assets/projects/wix/eagle-logos/capa.png",
+        "title": "Eagle Logos",
+        "type": "Wix",
+        "creationDate": "31 Jan. 2024",
+        "linkProject": "./assets/projects/wix/eagle-logos/index.html"
+    },
+    {
+        "imageSrc": "./assets/projects/wix/energy-porto/capa.png",
+        "title": "Energy Porto",
+        "type": "Wix",
+        "creationDate": "15 Dec. 2023",
+        "linkProject": "./assets/projects/wix/energy-porto/index.html"
+    },
+    {
+        "imageSrc": "./assets/projects/wix/infusion-therapy/capa.png",
+        "title": "Infusion Therapy",
+        "type": "Wix",
+        "creationDate": "23 Jan. 2023",
+        "linkProject": "./assets/projects/wix/infusion-therapy/index.html"
+    },
+    {
+        "imageSrc": "./assets/projects/wix/insaltec/capa.png",
+        "title": "Insaltec",
+        "type": "Wix",
+        "creationDate": "9 Nov. 2022",
+        "linkProject": "./assets/projects/wix/insaltec/index.html"
+    },
+    {
+        "imageSrc": "./assets/projects/wix/toque-green/capa.png",
+        "title": "Toque Green",
+        "type": "Wix",
+        "creationDate": "15 Nov. 2023",
+        "linkProject": "./assets/projects/wix/toque-green/index.html"
+    },
+    {
+        "imageSrc": "./assets/projects/wix/vila-corp/capa.png",
+        "title": "Vila Corp",
+        "type": "Wix",
+        "creationDate": "5 Oct. 2022",
+        "linkProject": "./assets/projects/wix/vila-corp/index.html"
     }
 ]

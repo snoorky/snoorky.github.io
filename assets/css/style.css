@@ -322,7 +322,7 @@ section#myPortfolio {
 #pages button {
     width: 40px;
     height: 40px;
-    background-color: var(--offBlack);
+    background-color: var(--purple);
     color: var(--white);
     border-radius: 50%;
     margin-left: 8px;
@@ -342,6 +342,7 @@ button.disabled {
     display: flex;
     flex-flow: row wrap;
     margin-right: -30px;
+    height: 600px;
 }
 
 .portfolio .item {
@@ -349,7 +350,7 @@ button.disabled {
     background-color: var(--white);
     border-radius: 10px;
     width: calc(33% - 20px);
-    height: auto;
+    height: 275px;
     margin: 0 20px 20px 0;
 }
 
@@ -656,11 +657,13 @@ section#project {
 
     .portfolio {
         margin-right: -20px;
+        height: 1015px;
     }
 
     .portfolio .item {
         width: calc(50% - 20px);
         margin: 0 20px 20px 0;
+        height: 325px;
     }
 
     .portfolio .item img {
@@ -910,11 +913,13 @@ section#project {
     .portfolio {
         flex-flow: column wrap;
         margin-right: -20px;
+        height: 530px;
     }
 
     .portfolio .item {
         width: 90vw;
-        margin: 0 0 5px 0;
+        margin: 0 0 15px 0;
+        height: 250px;
     }
 
     .portfolio .item img {
@@ -922,6 +927,7 @@ section#project {
         height: 175px;
         object-fit: fill;
     }
+
     section#contact {
         margin: auto auto;
         height: 100vh;
