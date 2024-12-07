@@ -42,7 +42,7 @@ class ThemeManager {
         this.body.classList.add(...config.bodyClass);
     
         const elementsToUpdate = [
-            // { id: "menu", firstClass: this.themeData.light.bodyClass, secondClass: this.themeData.dark.bodyClass, addClasses: config.bodyClass },
+            // { id: "menu", firstClass: this.themeData.light.blackWhiteClass, secondClass: this.themeData.dark.blackWhiteClass, addClasses: config.blackWhiteClass },
             { id: "dropdown-menu", firstClass: this.themeData.light.blackWhiteClass, secondClass: this.themeData.dark.blackWhiteClass, addClasses: config.blackWhiteClass },
             { id: "dropdown-toggle", firstClass: this.themeData.light.blackWhiteClass, secondClass: this.themeData.dark.blackWhiteClass, addClasses: config.blackWhiteClass },
             { id: "boxContainer", firstClass: this.themeData.light.blackWhiteClass, secondClass: this.themeData.dark.blackWhiteClass, addClasses: config.blackWhiteClass },
@@ -74,6 +74,14 @@ class ThemeManager {
 class TranslationManager {
     constructor() {
         this.selectedLanguage = document.getElementById("selected-language");
+        this.languageDropdown = document.getElementById("language-dropdown");
+        this.languageCode = localStorage.getItem('language') || this.getBrowserLanguage();
+        this.updateSelectedLanguageText(this.languageCode);
+    }
+
+    getBrowserLanguage() {
+        const browserLanguage = navigator.language || navigator.userLanguage;
+        return browserLanguage.startsWith('pt') ? 'pt-br' : 'en-us';
     }
   
     loadTranslations(languageCode) {
@@ -83,6 +91,7 @@ class TranslationManager {
             const translations = data[languageCode] || data["en-us"];
             this.applyTranslations(translations);
             localStorage.setItem('language', languageCode);
+            this.updateSelectedLanguageText(languageCode);
         })
         .catch(error => console.error("Erro ao carregar o arquivo de traduções:", error));
     }
@@ -95,16 +104,26 @@ class TranslationManager {
             }
         });
     }
+
+    updateSelectedLanguageText(languageCode) {
+        const selectedText = languageCode === 'pt-br' ? 'Português' : 'English';
+        document.getElementById("selected-language").textContent = selectedText;
+    }
 }
   
 const themeManager = new ThemeManager();
 const translationManager = new TranslationManager();
- 
-document.addEventListener('DOMContentLoaded', () => {
-    const menu = document.getElementById("menu");
-    if (!menu.classList.contains("hidden")) {
-        menu.classList.add("hidden");
-    }
+
+translationManager.loadTranslations(translationManager.languageCode);
+
+document.getElementById("dropdown-toggle").addEventListener("click", () => {
+    document.getElementById("dropdown-menu").classList.toggle("hidden");
+});
+
+document.getElementById("dropdown-menu").addEventListener("click", (event) => {
+    const selectedValue = event.target.getAttribute("data-value");
+    translationManager.loadTranslations(selectedValue);
+    document.getElementById("dropdown-menu").classList.add("hidden");
 });
 
 document.getElementById("theme-toggle").addEventListener('click', () => themeManager.toggleTheme());
@@ -114,17 +133,11 @@ document.getElementById("menu-toggle").addEventListener("click", () => {
     document.body.classList.toggle("no-scroll");
 });
 
-document.getElementById("dropdown-toggle").addEventListener("click", () => {
-    document.getElementById("dropdown-menu").classList.toggle("hidden");
-});
-
-document.getElementById("dropdown-menu").addEventListener("click", (event) => {
-    const selectedValue = event.target.getAttribute("data-value");
-    const selectedText = event.target.textContent;
-    
-    document.getElementById("selected-language").textContent = selectedText;
-    document.getElementById("dropdown-menu").classList.add("hidden");
-    translationManager.loadTranslations(selectedValue);
+document.addEventListener('DOMContentLoaded', () => {
+    const menu = document.getElementById("menu");
+    if (!menu.classList.contains("hidden")) {
+        menu.classList.add("hidden");
+    }
 });
   
 themeManager.setTheme(localStorage.getItem('theme') || 'light');
