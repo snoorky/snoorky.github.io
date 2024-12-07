@@ -4,13 +4,17 @@ class ThemeManager {
         this.themeData = {
             light: {
                 bodyClass: ['bg-white', 'text-black'],
-                blackWhiteClass: ['bg-[rgba(33,33,36,0.05)]', 'text-black'],
+                reversedClass: ['bg-[#EFF0F3]', 'text-black'],
+                cardsClass: ['bg-[#E7E8EC]', 'text-black'],
+                inputsClass: ['bg-[#E0E1E6]', 'text-black'],
                 iconToShow: document.getElementById('light-icon'),
                 iconToHide: document.getElementById('dark-icon')
             },
             dark: {
-                bodyClass: ['bg-[#212124]', 'text-white'],
-                blackWhiteClass: ['bg-[rgba(255,255,255,0.05)]', 'text-white'],
+                bodyClass: ['bg-[#111111]', 'text-white'],
+                reversedClass: ['bg-[#1F1F22]', 'text-white'],
+                cardsClass: ['bg-[#27282C]', 'text-white'],
+                inputsClass: ['bg-[#2F3035]', 'text-white'],
                 iconToShow: document.getElementById('dark-icon'),
                 iconToHide: document.getElementById('light-icon')
             }
@@ -42,18 +46,18 @@ class ThemeManager {
         this.body.classList.add(...config.bodyClass);
     
         const elementsToUpdate = [
-            // { id: "menu", firstClass: this.themeData.light.blackWhiteClass, secondClass: this.themeData.dark.blackWhiteClass, addClasses: config.blackWhiteClass },
-            { id: "dropdown-menu", firstClass: this.themeData.light.blackWhiteClass, secondClass: this.themeData.dark.blackWhiteClass, addClasses: config.blackWhiteClass },
-            { id: "dropdown-toggle", firstClass: this.themeData.light.blackWhiteClass, secondClass: this.themeData.dark.blackWhiteClass, addClasses: config.blackWhiteClass },
-            { id: "boxContainer", firstClass: this.themeData.light.blackWhiteClass, secondClass: this.themeData.dark.blackWhiteClass, addClasses: config.blackWhiteClass },
-            { id: "boxWebsiteService", firstClass: this.themeData.light.blackWhiteClass, secondClass: this.themeData.dark.blackWhiteClass, addClasses: config.blackWhiteClass },
-            { id: "boxLandingPageService", firstClass: this.themeData.light.blackWhiteClass, secondClass: this.themeData.dark.blackWhiteClass, addClasses: config.blackWhiteClass },
-            { id: "boxEcommerceService", firstClass: this.themeData.light.blackWhiteClass, secondClass: this.themeData.dark.blackWhiteClass, addClasses: config.blackWhiteClass },
-            { id: "formsBox", firstClass: this.themeData.light.blackWhiteClass, secondClass: this.themeData.dark.blackWhiteClass, addClasses: config.blackWhiteClass },
-            { id: "name", firstClass: this.themeData.light.blackWhiteClass, secondClass: this.themeData.dark.blackWhiteClass, addClasses: config.blackWhiteClass },
-            { id: "email", firstClass: this.themeData.light.blackWhiteClass, secondClass: this.themeData.dark.blackWhiteClass, addClasses: config.blackWhiteClass },
-            { id: "message", firstClass: this.themeData.light.blackWhiteClass, secondClass: this.themeData.dark.blackWhiteClass, addClasses: config.blackWhiteClass },
-            { id: "formsContainer", firstClass: this.themeData.light.blackWhiteClass, secondClass: this.themeData.dark.blackWhiteClass, addClasses: config.blackWhiteClass },
+            { id: "menu", firstClass: this.themeData.light.reversedClass, secondClass: this.themeData.dark.reversedClass, addClasses: config.reversedClass },
+            { id: "dropdown-menu", firstClass: this.themeData.light.reversedClass, secondClass: this.themeData.dark.reversedClass, addClasses: config.reversedClass },
+            { id: "dropdown-toggle", firstClass: this.themeData.light.reversedClass, secondClass: this.themeData.dark.reversedClass, addClasses: config.reversedClass },
+            { id: "boxContainer", firstClass: this.themeData.light.reversedClass, secondClass: this.themeData.dark.reversedClass, addClasses: config.reversedClass },
+            { id: "boxWebsiteService", firstClass: this.themeData.light.cardsClass, secondClass: this.themeData.dark.cardsClass, addClasses: config.cardsClass },
+            { id: "boxLandingPageService", firstClass: this.themeData.light.cardsClass, secondClass: this.themeData.dark.cardsClass, addClasses: config.cardsClass },
+            { id: "boxEcommerceService", firstClass: this.themeData.light.cardsClass, secondClass: this.themeData.dark.cardsClass, addClasses: config.cardsClass },
+            { id: "formsContainer", firstClass: this.themeData.light.reversedClass, secondClass: this.themeData.dark.reversedClass, addClasses: config.reversedClass },
+            { id: "formsBox", firstClass: this.themeData.light.cardsClass, secondClass: this.themeData.dark.cardsClass, addClasses: config.cardsClass },
+            { id: "name", firstClass: this.themeData.light.inputsClass, secondClass: this.themeData.dark.inputsClass, addClasses: config.inputsClass },
+            { id: "email", firstClass: this.themeData.light.inputsClass, secondClass: this.themeData.dark.inputsClass, addClasses: config.inputsClass },
+            { id: "message", firstClass: this.themeData.light.inputsClass, secondClass: this.themeData.dark.inputsClass, addClasses: config.inputsClass },
         ];
 
         elementsToUpdate.forEach(item => {
@@ -62,8 +66,8 @@ class ThemeManager {
 
         const footer = document.querySelector('footer');
         if (footer) {
-            footer.classList.remove(...this.themeData.light.blackWhiteClass, ...this.themeData.dark.blackWhiteClass);
-            footer.classList.add(...config.blackWhiteClass);
+            footer.classList.remove(...this.themeData.light.reversedClass, ...this.themeData.dark.reversedClass);
+            footer.classList.add(...config.reversedClass);
         }
     
         config.iconToShow.classList.remove('hidden');
@@ -129,16 +133,14 @@ document.getElementById("dropdown-menu").addEventListener("click", (event) => {
 document.getElementById("theme-toggle").addEventListener('click', () => themeManager.toggleTheme());
 
 document.getElementById("menu-toggle").addEventListener("click", () => {
-    document.getElementById("menu").classList.toggle("hidden");
+    menu.classList.toggle("hidden");
     document.body.classList.toggle("no-scroll");
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const menu = document.getElementById("menu");
-    if (!menu.classList.contains("hidden")) {
-        menu.classList.add("hidden");
-    }
-});
+const menu = document.getElementById("menu");
+if (!menu.classList.contains("hidden")) {
+    menu.classList.remove("hidden");
+}
   
 themeManager.setTheme(localStorage.getItem('theme') || 'light');
 translationManager.loadTranslations(localStorage.getItem('language') || 'en-us');
