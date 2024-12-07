@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Raphael Vitor - Web Developer especializado em criar websites modernos e funcionais para empresas que buscam resultados.">
+	<meta name="keywords" content="venda de websites, desenvolvimento de websites, ecommerce, landing pages, criação de sites">
+	<meta property="og:title" content="Venda de Websites - Raphael Vitor">
+	<meta property="og:description" content="Transforme sua ideia em um site profissional com a ajuda de Raphael Vitor. Confira os pacotes de websites e landing pages para empresas de todos os tamanhos.">
+	<meta property="og:image" content="/assets/cover.png">
+	<meta property="og:url" content="https://snoorky.github.io/websites">
+	<title data-translate="titleWebsite"></title>
+	<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="select-none">
+    <header class="mx-[6vw] md:mx-[10vw] 2xl:mx-[20vw] flex items-center justify-between h-[10vh]">
+		<div class="text-xl font-bold"><a href="index.html">Raphael Vitor</a></div>
+		<button id="menu-toggle" class="md:hidden">
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+			</svg>
+		</button>
+		<nav id="menu" class="md:flex flex-col md:flex-row md:items-center md:space-x-6 absolute md:static top-[10vh] right-5 w-auto md:w-auto shadow-[0_2px_10px_rgba(0,0,0,0.1)] md:shadow-none px-5 py-5 text-right list-none rounded-lg">
+			<li><a data-translate="menu-home" href="/index.html" class="block py-3 md:py-0 hover:text-[#696EFF]"></a></li>
+			<li><a data-translate="menu-about" href="/about.html" class="block py-3 md:py-0 hover:text-[#696EFF]"></a></li>
+			<li><a data-translate="menu-website" href="/websites.html" class="block py-3 md:py-0 hover:text-[#696EFF]"></a></li>
+			<li class="ml-auto">
+				<button id="theme-toggle" class="flex px-[80%] md:px-0 py-3 md:py-0">
+					<svg id="light-icon" fill="currentColor" class="w-6 h-6 hidden">
+						<path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
+					</svg>
+					<svg id="dark-icon" fill="currentColor" class="w-6 h-6">
+						<path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162Z" clip-rule="evenodd" />
+					</svg>
+				</button>
+			</li>
+			<div id="language-dropdown" class="relative inline-block text-right w-38">
+				<button id="dropdown-toggle" class="w-full py-2 px-4 rounded-lg shadow flex justify-between items-center hover:text-[#696EFF]">
+					<span id="selected-language">Language</span>
+					<svg class="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+					</svg>
+				</button>
+				<ul id="dropdown-menu" class="absolute hidden text-left shadow-md rounded-lg z-10 my-2 w-full">
+					<li class="py-2 px-4 cursor-pointer hover:text-[#696EFF]" data-value="pt-br">Português</li>
+					<li class="py-2 px-4 cursor-pointer hover:text-[#696EFF]" data-value="en-us">English</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+    <main class="flex flex-col lg:flex-row mx-[6vw] md:mx-[10vw] lg:space-x-8 md:my-16 lg:my-20 my-8">
+        <div class="w-full space-y-6 mb-8 text-center lg:text-left content-center">
+            <h1 data-translate="header" class="text-3xl md:text-[3.5rem] font-bold leading-tight md:mt-4"></h1>
+            <p data-translate="subheader" class="text-lg md:text-xl"></p>
+            <button data-translate="ctaWebsite" class="bg-[#25D366] text-white py-2 px-4 sm:px-6 rounded-lg hover:bg-[#128C7E] transition duration-300"></button>
+        </div>
+        <div class="content flex w-full justify-center">
+            <div class="flex items-start">
+                <img class="w-72 h-[90%] rounded-2xl object-cover" src="/assets/website.jpg" alt="">
+            </div>
+            <div class="flex items-end ml-5">
+                <img class="w-72 h-[90%] rounded-2xl object-cover" src="/assets/ecommerce.jpg" alt="">
+            </div>
+        </div>
+    </main>
+    <section class="mx-[6vw] md:mx-[10vw] 2xl:mx-[20vw] flex flex-col text-center">
+        <h3 data-translate="trust" class="sm:text-md text-lg uppercase tracking-wide font-extrabold"></h3>
+        <div class="flex justify-evenly flex-wrap my-12 mb-20">
+            <img src="/assets/boa-fortuna.png" alt="boa fortuna" class="h-20 object-cover object-center rounded">
+            <img src="/assets/criar-nutrition.png" alt="criar nutrition" class="h-20 object-cover object-center rounded">
+            <img src="/assets/dba-clinica.png" alt="dba clínica" class="h-20 object-cover object-center rounded">
+            <img src="/assets/equilibrio.png" alt="equilíbrio nutricionista" class="h-20 object-cover object-center rounded">
+            <img src="/assets/frame-forte.png" alt="frame forte" class="h-20 object-cover object-center rounded">
+            <img src="/assets/gessica-carvalho.png" alt="gessica carvalho" class="h-20 object-cover object-center rounded">
+            <img src="/assets/insaltec.png" alt="insaltec" class="h-20 object-cover object-center rounded">
+            <img src="/assets/instituto-gold.png" alt="instituto gold" class="h-20 object-cover object-center rounded">
+            <img src="/assets/laboratorio-veterinario.png" alt="laboratorio" class="h-20 object-cover object-center rounded">
+            <img src="/assets/logica-empreendimentos.png" alt="logica empreendimentos" class="h-20 object-cover object-center rounded">
+            <img src="/assets/medical-prime.png" alt="medical prime" class="h-20 object-cover object-center rounded">
+            <img src="/assets/morumbis-premium.png" alt="morumbis premium" class="h-20 object-cover object-center rounded">
+            <img src="/assets/oxigenio.png" alt="oxigenio & máquinas" class="h-20 object-cover object-center rounded">
+            <img src="/assets/viva-corretora.png" alt="viva corretora" class="h-20 object-cover object-center rounded">
+        </div>
+    </section>
+    <section id="boxContainer" class="flex flex-col mx-[6vw] md:mx-[10vw] rounded-[32px] p-8 lg:p-12">
+        <h2 data-translate="whatWeDo" class="text-2xl font-bold text-center w-full pb-8 lg:pb-16 lg:text-[44px]"></h2>
+        <div class="w-full grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <div id="boxWebsiteService" class="p-8 rounded-3xl shadow">
+                <h3 class="text-xl sm:text-xl lg:text-2xl font-bold flex content-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-8 mr-2">
+                        <defs>
+                            <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#EB5840" />
+                                <stop offset="100%" stop-color="#ED9F56" />
+                            </linearGradient>
+                        </defs>
+                        <path fill="url(#orangeGradient)" d="M21.721 12.752a9.711 9.711 0 0 0-.945-5.003 12.754 12.754 0 0 1-4.339 2.708 18.991 18.991 0 0 1-.214 4.772 17.165 17.165 0 0 0 5.498-2.477ZM14.634 15.55a17.324 17.324 0 0 0 .332-4.647c-.952.227-1.945.347-2.966.347-1.021 0-2.014-.12-2.966-.347a17.515 17.515 0 0 0 .332 4.647 17.385 17.385 0 0 0 5.268 0ZM9.772 17.119a18.963 18.963 0 0 0 4.456 0A17.182 17.182 0 0 1 12 21.724a17.18 17.18 0 0 1-2.228-4.605ZM7.777 15.23a18.87 18.87 0 0 1-.214-4.774 12.753 12.753 0 0 1-4.34-2.708 9.711 9.711 0 0 0-.944 5.004 17.165 17.165 0 0 0 5.498 2.477ZM21.356 14.752a9.765 9.765 0 0 1-7.478 6.817 18.64 18.64 0 0 0 1.988-4.718 18.627 18.627 0 0 0 5.49-2.098ZM2.644 14.752c1.682.971 3.53 1.688 5.49 2.099a18.64 18.64 0 0 0 1.988 4.718 9.765 9.765 0 0 1-7.478-6.816ZM13.878 2.43a9.755 9.755 0 0 1 6.116 3.986 11.267 11.267 0 0 1-3.746 2.504 18.63 18.63 0 0 0-2.37-6.49ZM12 2.276a17.152 17.152 0 0 1 2.805 7.121c-.897.23-1.837.353-2.805.353-.968 0-1.908-.122-2.805-.353A17.151 17.151 0 0 1 12 2.276ZM10.122 2.43a18.629 18.629 0 0 0-2.37 6.49 11.266 11.266 0 0 1-3.746-2.504 9.754 9.754 0 0 1 6.116-3.985Z" />
+                    </svg>  
+                    Website</h3>
+                <p data-translate="websiteDescription" class="mt-4 text-base"></p>
+            </div>
+            <div id="boxLandingPageService" class="p-8 rounded-3xl shadow">
+                <h3 class="text-xl sm:text-xl lg:text-2xl font-bold flex content-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-8 mr-2">
+                        <defs>
+                            <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#696EFF" />
+                                <stop offset="100%" stop-color="#F8ACFF" />
+                            </linearGradient>
+                        </defs>
+                        <path fill-rule="evenodd" fill="url(#purpleGradient)" d="M17.303 5.197A7.5 7.5 0 0 0 6.697 15.803a.75.75 0 0 1-1.061 1.061A9 9 0 1 1 21 10.5a.75.75 0 0 1-1.5 0c0-1.92-.732-3.839-2.197-5.303Zm-2.121 2.121a4.5 4.5 0 0 0-6.364 6.364.75.75 0 1 1-1.06 1.06A6 6 0 1 1 18 10.5a.75.75 0 0 1-1.5 0c0-1.153-.44-2.303-1.318-3.182Zm-3.634 1.314a.75.75 0 0 1 .82.311l5.228 7.917a.75.75 0 0 1-.777 1.148l-2.097-.43 1.045 3.9a.75.75 0 0 1-1.45.388l-1.044-3.899-1.601 1.42a.75.75 0 0 1-1.247-.606l.569-9.47a.75.75 0 0 1 .554-.68Z" clip-rule="evenodd" />
+                    </svg>
+                    Landing Page</h3>
+                <p data-translate="landingPageDescription" class="mt-4 text-base"></p>
+            </div>
+            <div id="boxEcommerceService" class="p-8 rounded-3xl shadow">
+                <h3 class="text-xl sm:text-xl lg:text-2xl font-bold flex content-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-8 mr-2">
+                        <defs>
+                            <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#2563EB" />
+                                <stop offset="100%" stop-color="#38BDF8" />
+                            </linearGradient>
+                        </defs>
+                        <path fill-rule="evenodd" fill="url(#blueGradient)" d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 0 0 4.25 22.5h15.5a1.875 1.875 0 0 0 1.865-2.071l-1.263-12a1.875 1.875 0 0 0-1.865-1.679H16.5V6a4.5 4.5 0 1 0-9 0ZM12 3a3 3 0 0 0-3 3v.75h6V6a3 3 0 0 0-3-3Zm-3 8.25a3 3 0 1 0 6 0v-.75a.75.75 0 0 1 1.5 0v.75a4.5 4.5 0 1 1-9 0v-.75a.75.75 0 0 1 1.5 0v.75Z" clip-rule="evenodd" />
+                    </svg>
+                    E-commerce</h3>
+                <p data-translate="eCommerceDescription" class="mt-4 text-base"></p>
+            </div>
+        </div>
+    </section>
+    <section class="flex flex-col items-center lg:flex-row mx-[6vw] md:mx-[10vw] lg:space-x-8 md:my-16 lg:my-24 my-8">
+		<div class="w-11/12 space-y-6 text-center lg:text-left">
+			<h2 data-translate="about" class="text-3xl md:text-5xl font-bold leading-tight md:mt-4"></h2>
+			<p data-translate="aboutFirstParagraph" class="text-lg md:text-xl"></p>
+			<p data-translate="aboutSecondParagraph" class="text-lg md:text-xl"></p>
+			<p data-translate="aboutThirdParagraph" class="text-lg md:text-xl"></p>
+		</div>
+		<div class="max-w-xs px-2.5 md:max-w-96 lg:block mt-8 md:mt-16 lg:mt-0">
+			<img alt="Raphael Vitor" width="320" class="rotate-3 rounded-2xl object-cover bg-zinc-800" src="/assets/me.jpeg">
+		</div>
+    </section>
+    <section id="formsContainer" class="flex flex-col mx-[6vw] md:mx-[10vw] bg-gray-900 rounded-[32px] md:my-16 lg:my-20 my-8 p-8 lg:p-12">
+        <div class="container text-center">
+            <h2 data-translate="projectTitle" class="text-2xl font-bold text-center w-full mb-6 lg:text-[44px]"></h2>
+            <p data-translate="projectDescription" class="text-lg mx-[-1rem] mb-8"></p>
+            <div id="formsBox" class="p-8 rounded-xl shadow-md">
+                <form action="https://formspree.io/f/xbljbdvq" method="POST" data-redirect="/index.html">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label data-translate="nameLabel" for="name" class="block text-sm text-left font-semibold"></label>
+                            <input type="text" id="name" name="name" class="w-full mt-2 p-3 border rounded-md outline-none border-none" required />
+                        </div>
+                        <div>
+                            <label data-translate="emailLabel" for="email" class="block text-sm text-left font-semibold"></label>
+                            <input data-translate="messageLabel" type="email" id="email" name="email" class="w-full mt-2 p-3 border rounded-md outline-none border-none" required />
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label data-translate="messageLabel" for="message" class="block text-sm text-left font-semibold"></label>
+                        <textarea id="message" name="message" rows="4" class="w-full mt-2 p-3 border rounded-md outline-none resize-none border-none" required></textarea>
+                    </div>
+                    <div class="mb-6">
+                        <label data-translate="projectOptions" for="project" class="block text-sm text-left font-semibold"></label>
+                        <div class="mt-4 flex flex-wrap">
+                            <label class="inline-flex items-center mr-6">
+                                <input type="radio" name="project" value="Website" class="form-radio" required />
+                                <span class="ml-2">Website</span>
+                            </label>
+                            <label class="inline-flex items-center mr-6">
+                                <input type="radio" name="project" value="E-commerce" class="form-radio" required />
+                                <span class="ml-2">E-commerce</span>
+                            </label>
+                            <label class="inline-flex items-center mr-6">
+                                <input type="radio" name="project" value="Landing Page" class="form-radio" required />
+                                <span class="ml-2">Landing Page</span>
+                            </label>
+                            <label class="inline-flex items-center mr-6">
+                                <input type="radio" name="project" value="Outro" class="form-radio" required />
+                                <span data-translate="projectOthers" class="ml-2"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <button data-translate="submitMessage" type="submit" class="w-full py-3 bg-[#25D366] text-white text-md font-small rounded-md hover:bg-[#128C7E] outline-none"></button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="h-[5vh] flex justify-center items-center"><p data-translate="copyright"></p></footer>
+    <script src="/script.js"></script>
+</body>
+
+</html>
