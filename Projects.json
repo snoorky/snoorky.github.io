@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Calculator",
+    "description": "Simple calculator project with basic operations, developed in ReactJS and Tailwind, with modern and responsive design.",
+    "languages": ["Javascript", "HTML", "TailwindCSS"],
+    "image": "https://raw.githubusercontent.com/snoorky/calculator/refs/heads/main/public/screenshot.png",
+    "livePreview": "https://snoorky.github.io/calculator",
+    "viewRepository": "https://github.com/snoorky/calculator"
+  },
+  {
+    "id": 2,
+    "name": "Git Profile Viewer",
+    "description": "React application that consumes the GitHub API to display user information, including repositories and profile, with a modern and responsive interface.",
+    "languages": ["Javascript", "HTML", "TailwindCSS"],
+    "image": "https://raw.githubusercontent.com/snoorky/github-profile-viewer/refs/heads/main/public/screenshot.png",
+    "livePreview": "https://snoorky.github.io/github-profile-viewer",
+    "viewRepository": "https://github.com/snoorky/github-profile-viewer"
+  },
+  {
+    "id": 3,
+    "name": "Wiki Repositories",
+    "description": "React application that uses the GitHub API to search for repositories, allowing you to view details or remove them from an interactive list.",
+    "languages": ["Javascript", "HTML", "TailwindCSS"],
+    "image": "https://raw.githubusercontent.com/snoorky/wiki-repositories/refs/heads/main/public/screenshot.png",
+    "livePreview": "https://snoorky.github.io/wiki-repositories",
+    "viewRepository": "https://github.com/snoorky/wiki-repositories"
+  },
+  {
+    "id": 4,
+    "name": "DIO Clone with Authentication",
+    "description": "Project that replicates the DIO layout with complete functionalities, including registration, login and user authentication, using ReactJS, TailwindCSS and a local API configured with JSON-Server.",
+    "languages": ["Javascript", "HTML", "TailwindCSS"],
+    "image": "https://raw.githubusercontent.com/snoorky/dio-page/refs/heads/main/public/screenshot.png",
+    "livePreview": "https://snoorky.github.io/dio-page",
+    "viewRepository": "https://github.com/snoorky/dio-page"
+  },
+  {
+    "id": 5,
+    "name": "Linktree Clone with DragAndDrop",
+    "description": "Linktree clone with features for adding website and social media links, as well as allowing you to reorder items using the drag and drop library",
+    "languages": ["Javascript", "HTML", "TailwindCSS"],
+    "image": "https://raw.githubusercontent.com/snoorky/linktree-clone/refs/heads/main/public/screenshot.png",
+    "livePreview": "https://snoorky.github.io/linktree-clone",
+    "viewRepository": "https://github.com/snoorky/linktree-clone"
+  },
+  {
+    "id": 6,
+    "name": "To Do List",
+    "description": "A simple and efficient To-Do List application with drag-and-drop functionality for task reordering and the ability to mark tasks as complete",
+    "languages": ["Javascript", "HTML", "TailwindCSS"],
+    "image": "https://raw.githubusercontent.com/snoorky/todo-list/refs/heads/main/public/screenshot.png",
+    "livePreview": "https://snoorky.github.io/todo-list",
+    "viewRepository": "https://github.com/snoorky/todo-list"
+  }
+]
