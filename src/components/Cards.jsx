@@ -16,8 +16,8 @@ export default function Cards({ data }) {
         <hr className="border-gray-600" />
         <p className="text-gray-400 line-clamp-2">{data.description}</p>
         <div className="flex justify-between gap-2">
-          <a className="w-full text-center text-white bg-[#ffffff1a] rounded-md py-2 px-4" href={data.viewRepository} target="_blank" rel="noopener noreferrer">View Repository</a>
-          <a className="w-full text-center text-white bg-[#38BDF8] rounded-md py-2 px-4" href={data.livePreview} target="_blank" rel="noopener noreferrer">Live Preview</a>
+          <a className="w-full text-center text-white bg-[#ffffff1a] rounded-md py-2" href={data.viewRepository} target="_blank" rel="noopener noreferrer">View Repository</a>
+          <a className="w-full text-center text-white bg-[#38BDF8] rounded-md py-2" href={data.livePreview} target="_blank" rel="noopener noreferrer">Live Preview</a>
         </div>
       </div>
     </div>
