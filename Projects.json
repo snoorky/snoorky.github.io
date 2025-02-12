@@ -19,12 +19,12 @@
   },
   {
     "id": 3,
-    "name": "Wiki Repositories",
-    "description": "React application that uses the GitHub API to search for repositories, allowing you to view details or remove them from an interactive list.",
+    "name": "Movie Platform",
+    "description": "A movie catalog application that consumes data from a public API, featuring popular movies, search functionality, and detailed movie pages, built with ReactJS and Axios.",
     "languages": ["Javascript", "HTML", "TailwindCSS"],
-    "image": "https://raw.githubusercontent.com/snoorky/wiki-repositories/refs/heads/main/public/screenshot.png",
-    "livePreview": "https://snoorky.github.io/wiki-repositories",
-    "viewRepository": "https://github.com/snoorky/wiki-repositories"
+    "image": "https://raw.githubusercontent.com/snoorky/movie-platform/refs/heads/main/public/screenshot.png",
+    "livePreview": "https://snoorky.github.io/movie-platform",
+    "viewRepository": "https://github.com/snoorky/movie-platform"
   },
   {
     "id": 4,
