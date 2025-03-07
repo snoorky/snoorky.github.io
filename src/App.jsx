@@ -1,27 +1,25 @@
-import { useEffect, useState } from "react";
-import About from "./pages/About";
-import Banner from "./pages/Banner";
-import Footer from "./pages/Footer";
-import Header from "./pages/Header";
-import Projects from "./pages/Projects";
+import { PiCaretDoubleDownBold } from "react-icons/pi"
+import { Contact } from "./components/Contact"
+import { Footer } from "./components/Footer"
+import { Home } from './components/Home'
+import { Projects } from "./components/Projects"
+import { Services } from "./components/Services"
+import { Stacks } from './components/Stacks'
+
+const stackList = ['Git', 'Gitlab', 'Github', 'Html', 'CSS', 'SASS', 'JavaScript',
+  'TypeScript', 'ReactJS', 'TailwindCSS', 'Figma', 'Swift', 'Slack', 'Jira'
+]
 
 export default function App() {
-  const [projects, setProjects] = useState([]);
-
-  useEffect(() => {
-    fetch("/Projects.json")
-      .then((response) => response.json())
-      .then((data) => setProjects(data))
-      .catch((error) => console.error("Erro ao carregar os projetos:", error));
-  }, []);
-
   return (
-    <main className="w-screen min-h-screen text-gray-300">
-      <Header />
-      <Banner />
-      <About />
-      <Projects data={projects} />
+    <>
+      <Home />
+      <Stacks stackList={stackList} />
+      <PiCaretDoubleDownBold size={32} color="c0c4ce" />
+      <Projects />
+      <Services />
+      <Contact />
       <Footer />
-    </main>
-  );
+    </>
+  )
 }

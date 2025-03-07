@@ -1,56 +1,44 @@
 [
   {
     "id": 1,
-    "name": "Calculator",
-    "description": "Simple calculator project with basic operations, developed in ReactJS and Tailwind, with modern and responsive design.",
-    "languages": ["Javascript", "HTML", "TailwindCSS"],
-    "image": "https://raw.githubusercontent.com/snoorky/calculator/refs/heads/main/public/screenshot.png",
-    "livePreview": "https://snoorky.github.io/calculator",
-    "viewRepository": "https://github.com/snoorky/calculator"
+    "name": "Pokedéx",
+    "description": "A Pokédex application that consumes data from the PokéAPI, featuring a paginated gallery of Pokémon and a dynamically generated random Pokémon with detailed Pokédex stats.",
+    "image": "https://raw.githubusercontent.com/snoorky/pokedex/refs/heads/main/public/screenshot.png",
+    "livePreview": "https://snoorky.github.io/pokedex"
   },
   {
     "id": 2,
-    "name": "Git Profile Viewer",
-    "description": "React application that consumes the GitHub API to display user information, including repositories and profile, with a modern and responsive interface.",
-    "languages": ["Javascript", "HTML", "TailwindCSS"],
-    "image": "https://raw.githubusercontent.com/snoorky/github-profile-viewer/refs/heads/main/public/screenshot.png",
-    "livePreview": "https://snoorky.github.io/github-profile-viewer",
-    "viewRepository": "https://github.com/snoorky/github-profile-viewer"
+    "name": "Movie Platform",
+    "description": "A movie catalog application that consumes data from a public API, featuring popular movies, search functionality, and detailed movie pages, built with ReactJS and Axios.",
+    "image": "https://raw.githubusercontent.com/snoorky/movie-platform/refs/heads/main/public/screenshot.png",
+    "livePreview": "https://snoorky.github.io/movie-platform"
   },
   {
     "id": 3,
-    "name": "Movie Platform",
-    "description": "A movie catalog application that consumes data from a public API, featuring popular movies, search functionality, and detailed movie pages, built with ReactJS and Axios.",
-    "languages": ["Javascript", "HTML", "TailwindCSS"],
-    "image": "https://raw.githubusercontent.com/snoorky/movie-platform/refs/heads/main/public/screenshot.png",
-    "livePreview": "https://snoorky.github.io/movie-platform",
-    "viewRepository": "https://github.com/snoorky/movie-platform"
+    "name": "Linktree Clone with DragAndDrop",
+    "description": "Linktree clone with features for adding website and social media links, as well as allowing you to reorder items using the drag and drop library",
+    "image": "https://raw.githubusercontent.com/snoorky/linktree-clone/refs/heads/main/public/screenshot.png",
+    "livePreview": "https://snoorky.github.io/linktree-clone"
   },
   {
     "id": 4,
     "name": "DIO Clone with Authentication",
     "description": "Project that replicates the DIO layout with complete functionalities, including registration, login and user authentication, using ReactJS, TailwindCSS and a local API configured with JSON-Server.",
-    "languages": ["Javascript", "HTML", "TailwindCSS"],
     "image": "https://raw.githubusercontent.com/snoorky/dio-page/refs/heads/main/public/screenshot.png",
-    "livePreview": "https://snoorky.github.io/dio-page",
-    "viewRepository": "https://github.com/snoorky/dio-page"
+    "livePreview": "https://snoorky.github.io/dio-page"
   },
   {
     "id": 5,
-    "name": "Linktree Clone with DragAndDrop",
-    "description": "Linktree clone with features for adding website and social media links, as well as allowing you to reorder items using the drag and drop library",
-    "languages": ["Javascript", "HTML", "TailwindCSS"],
-    "image": "https://raw.githubusercontent.com/snoorky/linktree-clone/refs/heads/main/public/screenshot.png",
-    "livePreview": "https://snoorky.github.io/linktree-clone",
-    "viewRepository": "https://github.com/snoorky/linktree-clone"
+    "name": "Git Profile Viewer",
+    "description": "React application that consumes the GitHub API to display user information, including repositories and profile, with a modern and responsive interface.",
+    "image": "https://raw.githubusercontent.com/snoorky/github-profile-viewer/refs/heads/main/public/screenshot.png",
+    "livePreview": "https://snoorky.github.io/github-profile-viewer"
   },
   {
     "id": 6,
     "name": "To Do List",
     "description": "A simple and efficient To-Do List application with drag-and-drop functionality for task reordering and the ability to mark tasks as complete",
-    "languages": ["Javascript", "HTML", "TailwindCSS"],
     "image": "https://raw.githubusercontent.com/snoorky/todo-list/refs/heads/main/public/screenshot.png",
-    "livePreview": "https://snoorky.github.io/todo-list",
-    "viewRepository": "https://github.com/snoorky/todo-list"
+    "livePreview": "https://snoorky.github.io/todo-list"
   }
 ]
