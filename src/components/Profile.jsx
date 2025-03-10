@@ -3,7 +3,7 @@ import Perfil from '../assets/profile.jpeg'
 
 export const Profile = () => {
     return (
-        <div className='relative mt-30'>
+        <div className='relative mt-16'>
             <div className='border-2 border-snk-purple rounded-full'>
                 <img className='w-28 h-28 object-cover object-[0%_30%] rounded-full border-4 border-snk-gray-100' src={Perfil} alt="foto de perfil do Raphael" />
             </div>

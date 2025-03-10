@@ -41,32 +41,14 @@ body {
   @apply flex flex-col items-center text-snk-gray-600
 }
 
-.title-lg {
-  @apply text-[3.5rem] leading-[1.2] font-sans;
+.asap {
   font-family: var(--font-asap);
 }
 
-.title-md {
-  @apply text-[1.5rem] leading-[1.2] font-sans;
-  font-family: var(--font-asap);
-}
-
-.title-sm {
-  @apply text-[1rem] leading-[1.2] font-sans;
-  font-family: var(--font-asap);
-}
-
-.subtitle {
-  @apply text-[1.25rem] leading-[1.2] font-mono;
+.inconsolata {
   font-family: var(--font-inconsolata);
 }
 
-.maven-md {
-  @apply text-[1rem] leading-[1.4] font-serif;
-  font-family: var(--font-maven);
-}
-
-.maven-sm {
-  @apply text-[0.875rem] leading-[1.4] font-serif;
+.maven {
   font-family: var(--font-maven);
 }

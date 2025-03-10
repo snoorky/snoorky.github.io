@@ -11,12 +11,12 @@ const socialMedia = {
 
 export const Contact = () => {
     return (
-        <section className="relative flex flex-col items-center justify-center text-center w-full gap-2 pb-52 pt-32">
-            <img className="min-w-screen absolute z-[-1]" src={BackgroundContact} alt="" />
-            <h2 className="subtitle text-snk-purple">Contato</h2>
-            <p className="title-md">Gostou dos meus trabalhos?</p>
-            <p className='maven-md'>Entre em contato ou acompanhe as minhas redes sociais!</p>
-            <div className="flex flex-col items-center space-y-4 mt-14 w-96">
+        <section className="relative flex flex-col items-center justify-center text-center w-full py-12 lg:py-24 px-4">
+            <img className="w-full h-full lg:h-auto absolute z-[-1]" src={BackgroundContact} alt="" />
+            <h2 className="inconsolata text-snk-purple lg:text-xl">Contato</h2>
+            <p className="asap lg:text-2xl">Gostou dos meus trabalhos?</p>
+            <p className='maven'>Entre em contato ou acompanhe as minhas redes sociais!</p>
+            <div className="flex flex-col items-center space-y-4 mt-7 lg:mt-14 w-full md:w-lg">
                 {Array.from(["LinkedIn", "Instagram", "Github", "Email"], (item, index) => {
                     const { icon, link } = socialMedia[item] || {}
 

@@ -6,9 +6,8 @@ import { Projects } from "./components/Projects"
 import { Services } from "./components/Services"
 import { Stacks } from './components/Stacks'
 
-const stackList = ['Git', 'Gitlab', 'Github', 'Html', 'CSS', 'SASS', 'JavaScript',
-  'TypeScript', 'ReactJS', 'TailwindCSS', 'Figma', 'Swift', 'Slack', 'Jira'
-]
+const stackList = ['Git', 'Gitlab', 'Github', 'Html', 'CSS', 'Slack', 'SASS', 'Jira', 'JavaScript',
+  'TypeScript', 'ReactJS', 'TailwindCSS', 'Figma', 'Swift']
 
 export default function App() {
   return (

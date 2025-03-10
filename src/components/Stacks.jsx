@@ -20,14 +20,14 @@ const stackIcons = {
 
 export const Stacks = ({ stackList }) => {
     return (
-        <section role='stacks' className="flex flex-wrap w-4xl items-center justify-center gap-2 mt-20 mb-24">
+        <section role='stacks' className="flex flex-wrap items-center justify-center gap-2 mt-10 mb-12 px-4 lg:w-4xl">
             {stackList.map((stack, stackIndex) => {
                 const { icon, color } = stackIcons[stack]
 
                 return icon && (
-                    <div key={stackIndex} className="bg-snk-gray-300 rounded-full px-4 py-2 flex space-x-2 items-center">
+                    <div key={stackIndex} className="flex space-x-2 items-center bg-snk-gray-300 rounded-full px-3 py-2">
                         <span style={{ color }}>{icon}</span>
-                        <p className="maven-md">{stack}</p>
+                        <p className="maven text-sm">{stack}</p>
                     </div>
                 )
             })}

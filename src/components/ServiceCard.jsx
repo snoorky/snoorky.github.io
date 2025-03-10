@@ -9,10 +9,10 @@ const serviceIcons = {
 export const ServiceCard = ({ service }) => {
     const { name, description, icon, color } = serviceIcons[service]
     return (
-        <div className="p-6 border border-snk-gray-300 rounded-xl text-start">
+        <div className="p-4 border border-snk-gray-300 rounded-xl text-start">
             <span className={`text-4xl ${color}`}>{icon}</span>
-            <h3 className="title-sm mt-4 mb-1">{name}</h3>
-            <p className="maven-sm">{description}</p>
+            <h3 className="asap mt-4 mb-1">{name}</h3>
+            <p className="maven">{description}</p>
         </div>
     )
 }
